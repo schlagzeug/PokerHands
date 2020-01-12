@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PokerHands"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Poker Hands" Height="350" Width="525">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
         
+        <GroupBox Header="Player 1" Grid.Row="0">
+            <StackPanel>
+                <Label Content="Name"/>
+                <TextBox Name="TextBox_Player1Name"/>
+                <Label Content="Cards"/>
+                <TextBox Name="TextBox_Player1Cards"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Player 2" Grid.Row="1">
+            <StackPanel>
+                <Label Content="Name"/>
+                <TextBox Name="TextBox_Player2Name"/>
+                <Label Content="Cards"/>
+                <TextBox Name="TextBox_Player2Cards"/>
+            </StackPanel>
+        </GroupBox>
+        <Button Content="Show Winner" Name="Button_ShowWinner" Grid.Row="2" Height="25" Width="100" HorizontalAlignment="Left" Click="Button_ShowWinner_Click"/>
+        <Label Name="Label_Winner" Grid.Row="2" Margin="105,0,0,0" HorizontalAlignment="Left"/>
     </Grid>
 </Window>
